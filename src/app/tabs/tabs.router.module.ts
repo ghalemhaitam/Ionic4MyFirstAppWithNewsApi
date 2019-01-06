@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { TabsPage } from './tabs.page';
+import { NewsPage } from '../news/news.page';
+import { NewsSinglePage } from '../news-single/news-single.page';
+import { AboutPage } from '../about/about.page';
+import { ContactPage } from '../contact/contact.page';
 
 const routes: Routes = [
   {
@@ -9,42 +13,53 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'news',
         children: [
           {
             path: '',
-            loadChildren: '../tab1/tab1.module#Tab1PageModule'
+            component: NewsPage
+           
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'news-single',
         children: [
           {
             path: '',
-            loadChildren: '../tab2/tab2.module#Tab2PageModule'
+            component: NewsSinglePage
+           
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'about',
         children: [
           {
             path: '',
-            loadChildren: '../tab3/tab3.module#Tab3PageModule'
+            component: AboutPage
+          }
+        ]
+      },
+      {
+        path: 'contact',
+        children: [
+          {
+            path: '',
+            component: ContactPage
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/news',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/news',
     pathMatch: 'full'
   }
 ];
