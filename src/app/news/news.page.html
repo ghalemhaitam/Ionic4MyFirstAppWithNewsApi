@@ -5,13 +5,13 @@
 </ion-header>
 
 <ion-content >
-  <ion-card *ngFor="let article of data?.articles">
-    <ion-img [src]="article.urlToImage"  ></ion-img>
+  <ion-card *ngFor="let article of data?.articles" (click)="onGoToNewsSinglePage(article)">
+   <!--  <ion-img [src]="article.urlToImage"  ></ion-img> -->
     <ion-card-header>
         <ion-card-title>{{ article.title }}</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
+   <!--  <ion-card-content>
         <p>{{ article.description }}</p>
-    </ion-card-content>
+    </ion-card-content> -->
 </ion-card>
 </ion-content>

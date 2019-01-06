@@ -9,6 +9,9 @@ import { TabsPageRoutingModule } from './tabs.router.module';
 import { NewsPageModule } from '../news/news.module';
 import { NewsSinglePageModule } from '../news-single/news-single.module';
 import { TabsPage } from './tabs.page';
+import { AboutPage } from '../about/about.page';
+import { AboutPageModule } from '../about/about.module';
+import { ContactPageModule } from '../contact/contact.module';
 
 @NgModule({
   imports: [
@@ -17,7 +20,9 @@ import { TabsPage } from './tabs.page';
     FormsModule,
     TabsPageRoutingModule,
     NewsPageModule,
-    NewsSinglePageModule
+    NewsSinglePageModule,
+    AboutPageModule,
+    ContactPageModule
   ],
   declarations: [TabsPage]
 })
